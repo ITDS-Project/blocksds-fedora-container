@@ -97,8 +97,8 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/${{ env.REPO }}:dev-${{ github.event.inputs.new_version }}
-            ghcr.io/${{ env.REPO }}:dev-latest
+            ghcr.io/${{ env.REPO }}:slim-${{ github.event.inputs.new_version }}
+            ghcr.io/${{ env.REPO }}:slim-latest
 
       - name: Build and push (slim, latest)
         uses: docker/build-push-action@v6
